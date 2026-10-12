@@ -1,48 +1,22 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
-
-{%- include head.html -%}
-
-<body class="{% if site.darkmode %}dark{% endif %}">
-
-    {%- include header.html -%}
-
-    <main id="contenido" class="page-content" tabindex="-1">
-        <div class="wrapper">
-
-            {%- if jekyll.environment == 'production' and site.gtm -%}
-            {%- include gtm_body.html -%}
-            {%- endif -%}
-
-
-            <div class="container section">
-                <header class="blog-header">
-                    <h1 class="page-title">{{ page.title | default: "Blog" | escape }}</h1>
-                </header>
-                <ul class="post-list">
-                    {% for _post in site.posts %}
-                    <li>
-                        <h2><a href="{{ _post.url | relative_url }}">{{ _post.title | escape }}</a></h2>
-                        <p class="post-meta">
-                            {%- if _post.author -%}{{ _post.author | escape }} · {% endif -%}
-                            {%- include date-es.html date=_post.date -%}
-                        </p>
-                        <p>{{ _post.excerpt | strip_html | truncatewords: 60 }}</p>
-                        <p><a href="{{ _post.url | relative_url }}">Leer más<span class="visually-hidden">: {{ _post.title | escape }}</span></a></p>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-
-
-            {%- if site.more_content -%}
-            {%- include more.html -%}
-            {%- endif -%}
-
-        </div>
-    </main>
-
-    {%- include footer.html -%}
-</body>
-
-</html>
+---
+layout: base
+---
+<header class="page-head">
+  <div class="wrap">
+    <h1>{% include ring-icon.html layer=3 %}{{ page.title | default: "Blog" | escape }}</h1>
+  </div>
+</header>
+<div class="wrap page-body">
+  <ul class="post-list">
+    {% for post in site.posts %}
+    <li>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+      <p class="post-list__date">
+        {%- if post.author -%}{{ post.author | escape }} · {% endif -%}
+        {%- include date-es.html date=post.date -%}
+      </p>
+      <p>{{ post.excerpt | strip_html | truncatewords: 60 }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

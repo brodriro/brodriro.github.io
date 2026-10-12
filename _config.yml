@@ -1,35 +1,23 @@
 # Site
 repository: brodriro/rzkbrian.github.io
 favicon: assets/images/android.png
-
 lang: es
-description: Desarrollador Android especializado en Java y Kotlin. Proyectos personales, experiencia y blog.
+description: Desarrollador Android con más de 10 años de experiencia en Java y Kotlin. Trayectoria, proyectos open source y artículos.
 
-# Personal info
-name: Brian Rodríguez
-title: Android Developer
-email: rzknairb@gmail.com
-phone: +51 948790426
-#website: https://google.com
+# Personal info (source of truth: resume.md in github.com/brodriro/brodriro)
+name: Brian Rodriguez
+title: Desarrollador Android
+location: Trujillo, Perú
+email: brian.rodriro@gmail.com
+github_username: brodriro
+linkedin_username: brodriro
+active_since: 2014
 
-darkmode: false
-
-# Social links
-twitter_username: brodriro
-github_username:  brodriro
-#stackoverflow_username: "00000001"
-facebook_username: brian.rzk
-#instagram_username: jekyll
-linkedin_username: rzkbrian
-#youtube_username: jekyll
-#googleplus_username: +jekyll
-
-
-# Additional icon links
-#additional_links:
-#- title: Link name
-#  icon: fa-amazon
-#  url: Link url (eg. https://google.com)
+lead: Más de 10 años desarrollando software, especializado en aplicaciones móviles con Java y Kotlin para clientes corporativos.
+summary: >-
+  Aplico Clean Architecture, patrones de diseño, pruebas unitarias y prácticas de CI/CD para construir
+  aplicaciones escalables y mantenibles. Tengo experiencia en equipos multidisciplinarios y distribuidos
+  en varios países, y actualmente profundizo en IA generativa y agentes de IA aplicados al desarrollo de software.
 
 # Google Analytics and Tag Manager
 # Using more than one of these may cause issues with reporting
@@ -37,58 +25,21 @@ linkedin_username: rzkbrian
 # gtag: "UA-00000000-0"
 # google_analytics: "UA-00000000-0"
 
-# About Section
-about_title: Sobre mí
-about_profile_image: assets/images/profile.jpg
-about_content: | # this will include new lines to allow paragraphs
-  Desarrollador Android especializado en Java, Kotlin, sólidos conocimientos en el uso de buenas prácticas de programación y arquitectura. Me adapto fácilmente al ambiente laboral, trabajo en equipo, actitud positiva y multidisciplinario.
-  
-  Algunos de mis principales Skills:
-    - <mark>Android Java</mark> <mark>Android Kotlin</mark> <mark>Flutter</mark> <mark>JUnit</mark>
-    - <mark>NodeJS</mark> <mark>ExpressJs</mark> <mark>ApiREST</mark> <mark>HTML5</mark>
-    - <mark>Git</mark> <mark>Git-flow</mark> <mark>SCRUM</mark>
-
-# Projects Section
-projects_title: Proyectos personales #(Use this to override about projects section title)
-
-# Experience Section
-experience_title: Experiencia #(Use this to override about experience section title)
-
-# Education Section
-education_title: Educación #(Use this to override about education section title)
-
-# More Section
-# more_title: A Little More About Me #(Use this to override about more section title)
-
-#more_content: | # this will include new lines to allow paragraphs
-#  This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
-
-#  Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
-
-# Footer
-footer_show_references: true
-
-# Build settings
-# theme: modern-resume-theme (Use this is you are hosting your resume yourself)
-# remote_theme: sproogen/modern-resume-theme (Use this if you are hosting your resume on GitHub)
-
 sass:
   sass_dir: _sass
   style: compressed
 
 plugins:
- - jekyll-seo-tag
+  - jekyll-seo-tag
 
-exclude : [
-  "README.md",
-  "Gemfile",
-  "Gemfile.lock",
-  "node_modules",
-  "vendor/bundle/",
-  "vendor/cache/",
-  "vendor/gems/",
-  "vendor/ruby/",
-  "lib/",
-  "scripts/",
-  "docker-compose.yml",
-  ]
+exclude:
+  - README.md
+  - PRODUCT.md
+  - DESIGN.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

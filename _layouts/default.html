@@ -1,43 +1,126 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+---
+layout: base
+---
+<section class="hero">
+  <div class="hero__text">
+    <h1>{{ site.name | escape }}</h1>
+    <p class="hero__role"><span>{{ site.title | escape }}</span><span class="hero__sep" aria-hidden="true"> · </span><span>{{ site.location | escape }}</span></p>
+    <p class="hero__lead">{{ site.lead | escape }}</p>
+    <p class="hero__actions no-print">
+      <a class="btn" href="mailto:{{ site.email }}">Escribirme</a>
+      <a class="btn btn--ghost" href="https://www.linkedin.com/in/{{ site.linkedin_username | cgi_escape }}/">LinkedIn</a>
+      <a class="btn btn--ghost" href="https://github.com/{{ site.github_username | cgi_escape }}">GitHub</a>
+    </p>
+    <p class="print-only">{{ site.email | escape }} · linkedin.com/in/{{ site.linkedin_username | escape }} · github.com/{{ site.github_username | escape }}</p>
+  </div>
+  <figure class="rings no-print">
+    <a class="ring ring--3" href="#open-source"><span>Open source y blog</span></a>
+    <a class="ring ring--2" href="#experiencia"><span>Experiencia</span></a>
+    <a class="ring ring--1" href="#habilidades"><span>Habilidades</span></a>
+    <a class="ring ring--0" href="#perfil"><strong>{{ site.name | split: " " | first | escape }}</strong><span>desde {{ site.active_since }}</span></a>
+    <figcaption>Como en Clean Architecture: cada capa depende solo de las de adentro.</figcaption>
+  </figure>
+</section>
 
-{%- include head.html -%}
+<section class="layer layer--0" id="perfil">
+  <div class="wrap">
+    <h2>{% include ring-icon.html layer=0 %}Perfil</h2>
+    <p class="prose-lead">{{ site.summary | escape }}</p>
+    <dl class="facts">
+      <div><dt>Formación</dt><dd>{{ site.data.profile.education | escape }}</dd></div>
+      <div><dt>Idiomas</dt><dd>{% for language in site.data.profile.languages %}{{ language.name }}: {{ language.level }}{% unless forloop.last %} · {% endunless %}{% endfor %}</dd></div>
+      <div><dt>Ubicación</dt><dd>{{ site.location | escape }}</dd></div>
+    </dl>
+  </div>
+</section>
 
-<body class="{% if site.darkmode %}dark{% endif %}">
-
-  {%- include header.html -%}
-
-  <main id="contenido" class="page-content" tabindex="-1">
-    <div class="wrapper">
-
-      {%- if jekyll.environment == 'production' and site.gtm -%}
-        {%- include gtm_body.html -%}
-      {%- endif -%}
-
-      {%- include about.html -%}
-
-      {%- if site.data.projects.size > 0 -%}
-        {%- include projects.html -%}
-      {%- endif -%}
-
-      {%- if site.data.experience.size > 0 -%}
-        {%- include experience.html -%}
-      {%- endif -%}
-
-      {%- comment -%}
-      {%- if site.data.education.size > 0 -%}
-        {%- include education.html -%}
-      {%- endif -%}
-      {%- endcomment -%}
-
-      {%- if site.more_content -%}
-        {%- include more.html -%}
-      {%- endif -%}
-
+<section class="layer layer--1" id="habilidades">
+  <div class="wrap">
+    <h2>{% include ring-icon.html layer=1 %}Habilidades</h2>
+    <p class="hint no-print" data-filter-hint hidden>Elige una tecnología para ver en qué roles y paquetes la he usado.</p>
+    {% for group in site.data.skills %}
+    <div class="skill-row">
+      <h3>{{ group.category | escape }}</h3>
+      <ul class="chips">
+        {%- for skill in group.items %}
+        <li><span class="chip" data-tech="{% include tech-key.html name=skill %}">{{ skill | escape }}</span></li>
+        {%- endfor %}
+      </ul>
     </div>
-  </main>
+    {% endfor %}
+  </div>
+</section>
 
-  {%- include footer.html -%}
-</body>
+<section class="layer layer--2" id="experiencia" tabindex="-1">
+  <div class="wrap">
+    <h2>{% include ring-icon.html layer=2 %}Experiencia</h2>
+    <p class="filter no-print" role="status" aria-live="polite" data-filter-status hidden>
+      <span data-filter-text></span>
+      <button type="button" data-filter-clear hidden>Quitar filtro</button>
+    </p>
+    <ol class="jobs">
+      {% for job in site.data.experience %}
+      <li class="job">
+        <p class="job__period">{{ job.period | escape }}</p>
+        <div>
+          <h3>{{ job.role | escape }}</h3>
+          <p class="job__org">{{ job.org | escape }}</p>
+          <ul class="job__bullets">
+            {%- for bullet in job.bullets %}
+            <li>{{ bullet | escape }}</li>
+            {%- endfor %}
+          </ul>
+          <ul class="tech-tags" aria-label="Tecnologías">
+            {%- for tech in job.tech %}
+            <li data-tech="{% include tech-key.html name=tech %}">{{ tech | escape }}</li>
+            {%- endfor %}
+          </ul>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
 
-</html>
+<section class="layer layer--3" id="open-source">
+  <div class="wrap">
+    <h2>{% include ring-icon.html layer=3 %}Open source</h2>
+    <ul class="pkgs">
+      {% for project in site.data.projects %}
+      <li class="pkg" id="{{ project.name | slugify }}" tabindex="-1">
+        <h3><code>{{ project.name | escape }}</code></h3>
+        <p>{{ project.description | escape }}</p>
+        {%- if project.tech %}
+        <ul class="tech-tags" aria-label="Tecnologías">
+          {%- for tech in project.tech %}
+          <li data-tech="{% include tech-key.html name=tech %}">{{ tech | escape }}</li>
+          {%- endfor %}
+        </ul>
+        {%- endif %}
+        <p class="pkg__links">
+          {%- if project.pub %}<a href="{{ project.pub }}">pub.dev</a>{% endif -%}
+          {%- if project.code %}<a href="{{ project.code }}">Código</a>{% endif -%}
+        </p>
+      </li>
+      {% endfor %}
+    </ul>
+
+    {% if site.posts.size > 0 %}
+    <h2 class="h2--second" id="blog">{% include ring-icon.html layer=3 %}Blog</h2>
+    <ul class="posts">
+      {% for post in site.posts limit: 3 %}
+      <li class="post-teaser">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+        <p class="post-teaser__date">{% include date-es.html date=post.date %}</p>
+        <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    {% if site.posts.size > 3 %}
+    <p class="posts__more no-print"><a href="{{ '/blog.html' | relative_url }}">Todos los artículos</a></p>
+    {% endif %}
+    {% endif %}
+  </div>
+</section>
+
+<script src="{{ '/assets/js/tech-filter.js' | relative_url }}" defer></script>

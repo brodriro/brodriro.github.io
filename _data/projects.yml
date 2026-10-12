@@ -1,37 +1,15 @@
-# Project template
-- layout: top-middle
-  name: Android-demo
-  link: https://github.com/brodriro/android-demo
-  github: brodriro/android-demo
-  quote: >
-    Android demo app - Clean Architecture
-  description: | # this will include new lines to allow paragraphs
-    Aplicación android demostrativa hecha en <mark>Java</mark>, implementada con <mark>Clean Architecture</mark>, <mark>MVP</mark>, <mark>Butter Knife</mark>, <mark>Navigation Component</mark>. Actualmente tiene integrada una pequeña red social y recibe actualizaciones regularmente con nuevas características y componentes nuevos.
+- name: http_mutual_authentication
+  pub: https://pub.dev/packages/http_mutual_authentication
+  code: https://github.com/brodriro/HttpMutualAuthentication
+  tech: [Dart, Flutter]
+  description: >-
+    Librería en Dart para aplicaciones Flutter: envía la información cifrada desde el dispositivo móvil
+    hasta el servidor mediante una llave pública.
 
-- layout: top-middle
-  name: Flutter-demo
-  link: https://github.com/brodriro/flutter-demo
-  github: brodriro/flutter-demo
-  quote: >
-    Flutter demo app - Clean Architecture
-  description: | # this will include new lines to allow paragraphs
-    Aplicación android demostrativa hecha en <mark>Dart</mark> mediante <mark>Flutter</mark>, implementada con <mark>Clean Architecture</mark>, <mark>BLoC</mark>, <mark>BLoC Provider</mark>. Actualmente es una pequeña red social, espero próximamente incluir mejoras y nuevos features.
-
-- layout: top-middle
-  name: FlutterSQLHelper
-  link: https://pub.dev/packages/sql_helper
-  github: brodriro/FlutterSQLHelper
-  quote: >
-    FlutterSQLHelper library
-  description: | # this will include new lines to allow paragraphs
-    Librería hecha en <mark>Dart</mark> para aplicaciones <mark>Flutter</mark>, facilita la creación de tablas, creación registros y consultas a base de datos. La libreria está basada en [SqfLite](https://pub.dev/packages/sqflite). Cuenta con clases de ayuda para mejorar el performance de la librería.
-
-   
-- layout: top-middle
-  name: Http Mutual Authentication
-  link: https://pub.dev/packages/http_mutual_authentication
-  github: brodriro/HttpMutualAuthentication
-  quote: >
-    Http Mutual Authentication library
-  description: | # this will include new lines to allow paragraphs
-    Librería hecha en <mark>Dart</mark> para aplicaciones <mark>Flutter</mark>, envía la información cifrada desde el dispositivo móvil hasta el servidor mediante una llave pública.
+- name: sql_helper
+  pub: https://pub.dev/packages/sql_helper
+  code: https://github.com/brodriro/FlutterSQLHelper
+  tech: [Dart, Flutter]
+  description: >-
+    Librería en Dart para aplicaciones Flutter: facilita la creación de tablas, registros y consultas
+    a base de datos. Basada en sqflite.

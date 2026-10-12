@@ -1,0 +1,9 @@
+{%- comment -%} Marks which architecture layer a section belongs to: 0 is the core, 3 the outermost. {%- endcomment -%}
+<svg class="ring-icon" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+  {%- for i in (0..3) -%}
+    {%- assign offset = i | times: 4 | plus: 2 -%}
+    {%- assign size = i | times: -8 | plus: 28 -%}
+    {%- assign layer = 3 | minus: i -%}
+    <rect x="{{ offset }}" y="{{ offset }}" width="{{ size }}" height="{{ size }}" rx="{{ 5 | minus: i }}"{% if layer == include.layer %} class="is-on"{% endif %}/>
+  {%- endfor -%}
+</svg>

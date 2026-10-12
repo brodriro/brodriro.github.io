@@ -1,9 +1,9 @@
-<footer class="container site-footer">
-  <p>
-    {{ site.name | escape }} -
-    <a href="mailto:{{ site.email }}">{{ site.email | escape }}</a>
-    {%- if site.footer_show_references -%}
-      &nbsp;- Referencias a solicitud
-    {%- endif -%}
-  </p>
+<footer class="foot">
+  <div class="wrap">
+    <p class="foot__cta">¿Hablamos? <a href="mailto:{{ site.email }}">{{ site.email | escape }}</a></p>
+    <p class="foot__links">
+      <a href="https://www.linkedin.com/in/{{ site.linkedin_username | cgi_escape }}/">LinkedIn</a> ·
+      <a href="https://github.com/{{ site.github_username | cgi_escape }}">GitHub</a>
+    </p>
+  </div>
 </footer>

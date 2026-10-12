@@ -1,6 +1,8 @@
 # Site
-repository: rzkbrian/rzkbrian.github.io
+repository: brodriro/rzkbrian.github.io
 favicon: assets/images/android.png
+
+lang: es
 
 # Personal info
 name: Brian Rodríguez
@@ -12,8 +14,8 @@ phone: +51 948790426
 darkmode: false
 
 # Social links
-twitter_username: rzkbrian
-github_username:  rzkbrian
+twitter_username: brodriro
+github_username:  brodriro
 #stackoverflow_username: "00000001"
 facebook_username: brian.rzk
 #instagram_username: jekyll
@@ -38,7 +40,7 @@ linkedin_username: rzkbrian
 about_title: Sobre mí
 about_profile_image: assets/images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Desarrollador Android especializado en Java, Kotlin, sólidos conocimientos en el uso de buenas prácticas de programación y arquitectura. Me adapto fácilmente al ambiente laboral, trabajo en equipo, actitud positiva y multidiciplinario.
+  Desarrollador Android especializado en Java, Kotlin, sólidos conocimientos en el uso de buenas prácticas de programación y arquitectura. Me adapto fácilmente al ambiente laboral, trabajo en equipo, actitud positiva y multidisciplinario.
   
   Algunos de mis principales Skills:
     - <mark>Android Java</mark> <mark>Android Kotlin</mark> <mark>Flutter</mark> <mark>JUnit</mark>
@@ -52,7 +54,7 @@ projects_title: Proyectos personales #(Use this to override about projects secti
 experience_title: Experiencia #(Use this to override about experience section title)
 
 # Education Section
-education_title: Educacion #(Use this to override about education section title)
+education_title: Educación #(Use this to override about education section title)
 
 # More Section
 # more_title: A Little More About Me #(Use this to override about more section title)
@@ -77,6 +79,7 @@ plugins:
  - jekyll-seo-tag
 
 exclude : [
+  "README.md",
   "Gemfile",
   "Gemfile.lock",
   "node_modules",

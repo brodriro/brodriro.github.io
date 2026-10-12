@@ -10,7 +10,7 @@ layout: post
 
 # Instalación
 <br>
-Para empezar a trabajar con <mark>git</mark> puedes darcargarlo [aquí](https://git-scm.com/). Con <mark>GIT</mark> puedes conectarte al servidor remoto de 2 formas:
+Para empezar a trabajar con <mark>git</mark> puedes descargarlo [aquí](https://git-scm.com/). Con <mark>GIT</mark> puedes conectarte al servidor remoto de 2 formas:
 
 + Por conexión HTTP: Requiere de un usuario y contraseña para conectarse al repositorio.
 + Por conexión SSH: Requiere obtener la llave pública del equipo de trabajo. Se requiere usar el comando `ssh-keygen`, puedes obtener mayor información [aquí](https://www.ssh.com/ssh/keygen/).
@@ -26,9 +26,9 @@ Luego `git config --global user.name` para visualizar el nombre de usuario.
 <br><br>
 
 ## <strong>Cambiar email de usuario</strong>
-Ejecutamos `git config --global user.email "rzknairb@gmail.com"` para añadir un nombre de usuario.
+Ejecutamos `git config --global user.email "rzknairb@gmail.com"` para añadir un email de usuario.
 
-Luego `git config --global user.email` para visualizar el nombre de usuario.
+Luego `git config --global user.email` para visualizar el email de usuario.
 <br><br>
 
 ## <strong>Configuración global y local</strong>
@@ -54,8 +54,8 @@ Podemos cambiar el editor de forma sencilla:
 # Clonar Repositorio (`git clone`)
 Con git existen 2 maneras de descargar un repositorio:
 
-+ Por HTTP: `git clone https://github.com/rzkbrian/rzkbrian.github.io.git`.
-+ Por SSH: `git clone git@github.com:rzkbrian/rzkbrian.github.io.git`.
++ Por HTTP: `git clone https://github.com/brodriro/rzkbrian.github.io.git`.
++ Por SSH: `git clone git@github.com:brodriro/rzkbrian.github.io.git`.
 
 Todo dependerá del modo en que puedas acceder al servidor.
 <br><br>
@@ -87,7 +87,7 @@ Sentencia completa:
 <br><br>
 
 # Actualizar o bajar cambios del servidor (`git pull`)
-Al igual que `git push`, éste comando tambien tiene el mismo cuerpo con la diferencia que en lugar de subir cambios (push), actualizaremos el repositorio local con los cambios que existen en el servidor con el fin de estar actualizados siempre con la última versión del código.
+Al igual que `git push`, éste comando también tiene el mismo cuerpo con la diferencia que en lugar de subir cambios (push), actualizaremos el repositorio local con los cambios que existen en el servidor con el fin de estar actualizados siempre con la última versión del código.
 + `git pull origin develop` - De ésta manera actualizaremos la rama <mark>develop</mark> de nuestro repositorio local.
 <br><br>
 
@@ -101,17 +101,17 @@ Este comando nos permite actualizar las ramas dependiendo el origen de los datos
 Este comando nos brinda el nombre del repositorio de la fuente de datos.
 
 + `git remote` - Informa el nombre del asignado a la fuente de datos.
-+ `git remote --v` - Informa sobre la url de conexion ala fuente de datos, puede ser una conexión HTTP o SSH.
++ `git remote -v` - Informa sobre la url de conexión a la fuente de datos, puede ser una conexión HTTP o SSH.
 + `git remote add <nombre_de_origen> <url_fuente_datos>` - Podemos añadir una nueva fuente de datos. <mark> nombre_de_origen </mark> debe ser reemplazado por el nombre correspondiente, generalmente y por defecto es `origin`, <mark>url_fuente_datos</mark> siempre será la url del repositorio remoto. Al final deberá quedar de la siguiente forma:
     - `git remote add origin_two https://gitlab.com/rzkbrian.git`.
-+ `git remote remove <origin> <url_source>` Elimina la fuente de datos del repositorio local.
++ `git remote remove <nombre_de_origen>` - Elimina la fuente de datos del repositorio local.
 <br><br>
 
 # Crear ramas locales y remotas (`git branch`)
 Con git podemos crear ramas o una versión del código que actualmente estamos trabajando para después integrarlo con los cambios del resto del equipo.
 
-+ `git branch nueva_rama` - Crea un nueva rama a partir de la rma actual donde de está trabajando. Luego para ir a la rama creada tendremos que usar `git checkout nueva_rama`.
++ `git branch nueva_rama` - Crea una nueva rama a partir de la rama actual donde se está trabajando. Luego para ir a la rama creada tendremos que usar `git checkout nueva_rama`.
 + `git checkout -b nueva_rama` - Es un atajo, el cual crea una nueva rama y te lleva directamente a ella.
 
-Para que la rama local se convierta en remota solo bastaría con hacer `git push origin nueva_rama` y automaticamente la nueva rama se creará en el repositorio remoto. Ésto esat sujeto a los permisos y niveles de seguridad del servidor remoto.
+Para que la rama local se convierta en remota solo bastaría con hacer `git push origin nueva_rama` y automáticamente la nueva rama se creará en el repositorio remoto. Ésto está sujeto a los permisos y niveles de seguridad del servidor remoto.
 

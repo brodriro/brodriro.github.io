@@ -15,18 +15,18 @@
             {%- endif -%}
 
 
-            <div id="main">
+            <div id="main" class="container">
                 <!-- Posts List -->
                 {% for _post in site.posts %}
-                    <a href="{{- _post.url | absolute_url -}}">{{- _post.title -}}</a>
-
-                    {% if _post.author -%}{{- _post.author }} | {% endif %}
-                    {{- _post.date | date_to_long_string -}}
-
-                    <p>{{- _post.excerpt | strip_html | truncatewords: 100 -}}</p>
-                    <a href="{{- _post.url | absolute_url -}}">read more</a>
-                    {%- assign _content = _excerpt | append: _link -%}
-
+                <article>
+                    <h4><a href="{{ _post.url | relative_url }}">{{ _post.title | escape }}</a></h4>
+                    <p>
+                        {%- if _post.author -%}{{ _post.author | escape }} | {% endif -%}
+                        {{- _post.date | date_to_long_string -}}
+                    </p>
+                    <p>{{ _post.excerpt | strip_html | truncatewords: 100 }}</p>
+                    <p><a href="{{ _post.url | relative_url }}">Leer más</a></p>
+                </article>
                 {% endfor %}
             </div>
 

@@ -23,11 +23,13 @@
       {%- if site.data.experience.size > 0 -%}
         {%- include experience.html -%}
       {%- endif -%}
-<!--
+
+      {%- comment -%}
       {%- if site.data.education.size > 0 -%}
         {%- include education.html -%}
       {%- endif -%}
--->
+      {%- endcomment -%}
+
       {%- if site.more_content -%}
         {%- include more.html -%}
       {%- endif -%}

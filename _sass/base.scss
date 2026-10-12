@@ -38,6 +38,15 @@ h3 {
   text-wrap: balance;
 }
 
+// Onest is loaded up to 600; keep the browser from synthesizing a bolder face.
+h1,
+h2,
+h3,
+strong,
+b {
+  font-weight: 600;
+}
+
 ul,
 ol {
   padding: 0;

@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-12T13:30:00Z",
+  "title": "Design System: Brian Rodriguez",
+  "extensions": {
+    "colorMeta": {
+      "layer-0": { "role": "neutral", "displayName": "Core White", "canonical": "oklch(100% 0 0)", "tonalRamp": ["oklch(15% 0 0)", "oklch(26% 0 0)", "oklch(38% 0 0)", "oklch(50% 0 0)", "oklch(62% 0 0)", "oklch(74% 0 0)", "oklch(85% 0 0)", "oklch(95% 0 0)"] },
+      "layer-1": { "role": "neutral", "displayName": "Pale Layer Green", "canonical": "oklch(89.7% 0.028 157)", "tonalRamp": ["oklch(15% 0.028 157)", "oklch(26% 0.028 157)", "oklch(38% 0.028 157)", "oklch(50% 0.028 157)", "oklch(62% 0.028 157)", "oklch(74% 0.028 157)", "oklch(85% 0.028 157)", "oklch(95% 0.028 157)"] },
+      "layer-2": { "role": "primary", "displayName": "Mid Layer Green", "canonical": "oklch(42% 0.077 163)", "tonalRamp": ["oklch(15% 0.077 163)", "oklch(26% 0.077 163)", "oklch(38% 0.077 163)", "oklch(50% 0.077 163)", "oklch(62% 0.077 163)", "oklch(74% 0.077 163)", "oklch(85% 0.077 163)", "oklch(95% 0.077 163)"] },
+      "layer-3": { "role": "primary", "displayName": "Outer Layer Green", "canonical": "oklch(27.6% 0.046 167)", "tonalRamp": ["oklch(15% 0.046 167)", "oklch(26% 0.046 167)", "oklch(38% 0.046 167)", "oklch(50% 0.046 167)", "oklch(62% 0.046 167)", "oklch(74% 0.046 167)", "oklch(85% 0.046 167)", "oklch(95% 0.046 167)"] },
+      "accent": { "role": "primary", "displayName": "Accent (alias of Mid Layer Green)", "canonical": "oklch(42% 0.077 163)", "tonalRamp": ["oklch(15% 0.077 163)", "oklch(26% 0.077 163)", "oklch(38% 0.077 163)", "oklch(50% 0.077 163)", "oklch(62% 0.077 163)", "oklch(74% 0.077 163)", "oklch(85% 0.077 163)", "oklch(95% 0.077 163)"] },
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "oklch(98% 0.004 135)", "tonalRamp": ["oklch(15% 0.004 135)", "oklch(26% 0.004 135)", "oklch(38% 0.004 135)", "oklch(50% 0.004 135)", "oklch(62% 0.004 135)", "oklch(74% 0.004 135)", "oklch(85% 0.004 135)", "oklch(95% 0.004 135)"] },
+      "tint": { "role": "neutral", "displayName": "Tint", "canonical": "oklch(95% 0.012 154)", "tonalRamp": ["oklch(15% 0.012 154)", "oklch(26% 0.012 154)", "oklch(38% 0.012 154)", "oklch(50% 0.012 154)", "oklch(62% 0.012 154)", "oklch(74% 0.012 154)", "oklch(85% 0.012 154)", "oklch(95% 0.012 154)"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "oklch(22.2% 0.026 165)", "tonalRamp": ["oklch(15% 0.026 165)", "oklch(26% 0.026 165)", "oklch(38% 0.026 165)", "oklch(50% 0.026 165)", "oklch(62% 0.026 165)", "oklch(74% 0.026 165)", "oklch(85% 0.026 165)", "oklch(95% 0.026 165)"] },
+      "muted": { "role": "neutral", "displayName": "Muted", "canonical": "oklch(45.7% 0.026 164)", "tonalRamp": ["oklch(15% 0.026 164)", "oklch(26% 0.026 164)", "oklch(38% 0.026 164)", "oklch(50% 0.026 164)", "oklch(62% 0.026 164)", "oklch(74% 0.026 164)", "oklch(85% 0.026 164)", "oklch(95% 0.026 164)"] },
+      "on-dark": { "role": "neutral", "displayName": "On Dark", "canonical": "oklch(100% 0 0)", "tonalRamp": ["oklch(15% 0 0)", "oklch(26% 0 0)", "oklch(38% 0 0)", "oklch(50% 0 0)", "oklch(62% 0 0)", "oklch(74% 0 0)", "oklch(85% 0 0)", "oklch(95% 0 0)"] },
+      "rule-on-dark": { "role": "neutral", "displayName": "Rule On Dark", "canonical": "rgba(255, 255, 255, 0.55)", "tonalRamp": ["oklch(15% 0 0)", "oklch(26% 0 0)", "oklch(38% 0 0)", "oklch(50% 0 0)", "oklch(62% 0 0)", "oklch(74% 0 0)", "oklch(85% 0 0)", "oklch(95% 0 0)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The name in the home hero. One per site." },
+      "page-title": { "displayName": "Page title", "purpose": "The h1 of the blog index and of an article, on the layer-3 header." },
+      "headline": { "displayName": "Headline", "purpose": "Layer headings on the home page, always preceded by the ring glyph." },
+      "title-lg": { "displayName": "Title large", "purpose": "Post titles in the blog index and h2 inside article prose." },
+      "title": { "displayName": "Title", "purpose": "Role names in Experience and post titles in the home teaser." },
+      "lead": { "displayName": "Lead", "purpose": "The single sentence under the name, capped at 30ch." },
+      "body": { "displayName": "Body", "purpose": "All running text; prose and bullet lists capped at 62ch." },
+      "label-lg": { "displayName": "Label large", "purpose": "Mono role line and job periods." },
+      "label": { "displayName": "Label", "purpose": "Mono chips and dates." },
+      "label-sm": { "displayName": "Label small", "purpose": "Mono diagram labels and definition terms." }
+    },
+    "shadows": [
+      { "name": "nav-current-rule", "value": "inset 0 -1.5px 0 #0f1f18", "purpose": "Draws the underline of the current navigation item. A rule, not elevation; the system casts no shadows." }
+    ],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.2, 0.8, 0.2, 1)", "purpose": "Easing for the filter dim (opacity) and the ring hover (transform), both 0.35s." },
+      { "name": "state-colour", "value": "0.18s ease", "purpose": "Background, text and border colour changes on buttons, chips and technology tags." },
+      { "name": "reduced-motion", "value": "prefers-reduced-motion: no-preference", "purpose": "Every transition is declared only inside this query; the filter's scroll-to-match falls back to an instant jump." }
+    ],
+    "breakpoints": [
+      { "name": "stack", "value": "51.25em" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single contact action per view.",
+      "html": "<a class=\"ds-btn\" href=\"#\">Escribirme</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; min-height: 2.9rem; padding: 0 1.3rem; background: var(--layer-3, #0c2f23); color: var(--on-dark, #fff); border: 1.5px solid var(--layer-3, #0c2f23); border-radius: 6px; font: 500 1.0625rem/1.6 'Onest', system-ui, sans-serif; text-decoration: none; transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease; } .ds-btn:hover { background: var(--layer-2, #1b5a41); border-color: var(--layer-2, #1b5a41); } .ds-btn:active { transform: translateY(1px); } .ds-btn:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary profile links beside the primary action.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">LinkedIn</a>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; min-height: 2.9rem; padding: 0 1.3rem; background: none; color: var(--ink, #0f1f18); border: 1.5px solid var(--ink, #0f1f18); border-radius: 6px; font: 500 1.0625rem/1.6 'Onest', system-ui, sans-serif; text-decoration: none; transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease; } .ds-btn-ghost:hover { background: var(--ink, #0f1f18); color: var(--on-dark, #fff); } .ds-btn-ghost:active { transform: translateY(1px); } .ds-btn-ghost:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }"
+    },
+    {
+      "name": "Skill Chips",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Mono skill tags on the pale layer; filterable ones toggle, unlisted ones are static.",
+      "html": "<div class=\"ds-chips\"><button type=\"button\" class=\"ds-chip\" aria-pressed=\"true\">Kotlin</button><button type=\"button\" class=\"ds-chip\" aria-pressed=\"false\">Java</button><span class=\"ds-chip ds-chip-static\">TypeScript</span></div>",
+      "css": ".ds-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 1rem; background: var(--layer-1, #cfe3d6); } .ds-chip { display: inline-block; padding: 0.4rem 0.7rem; background: var(--layer-0, #fff); color: var(--ink, #0f1f18); border: 1.5px solid var(--ink, #0f1f18); border-radius: 5px; font: 0.85rem/1.6 'JetBrains Mono', ui-monospace, monospace; transition: background-color 0.18s ease, color 0.18s ease; } button.ds-chip { cursor: pointer; } button.ds-chip:hover { background: var(--tint, #e9f1eb); } button.ds-chip[aria-pressed=\"true\"] { background: var(--ink, #0f1f18); color: var(--on-dark, #fff); } button.ds-chip:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; } .ds-chip-static { background: none; border-color: rgba(15, 31, 24, 0.4); }"
+    },
+    {
+      "name": "Technology Tags",
+      "kind": "chip",
+      "refersTo": "tech-tag",
+      "description": "Outline mono tags under a role or package; the one matching the active filter inverts.",
+      "html": "<ul class=\"ds-tags\"><li>Java</li><li class=\"ds-is-hit\">Kotlin</li><li>Jenkins</li></ul>",
+      "css": ".ds-tags { display: flex; flex-wrap: wrap; gap: 0.35rem 0.5rem; margin: 0; padding: 1rem; list-style: none; background: var(--layer-2, #1b5a41); color: var(--on-dark, #fff); font: 0.78rem/1.6 'JetBrains Mono', ui-monospace, monospace; } .ds-tags li { padding: 0.15rem 0.45rem; border: 1.5px solid rgba(255, 255, 255, 0.4); border-radius: 5px; } .ds-tags .ds-is-hit { background: var(--on-dark, #fff); border-color: var(--on-dark, #fff); color: var(--layer-3, #0c2f23); }"
+    },
+    {
+      "name": "Top Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Site name, section links and the small primary button, on paper.",
+      "html": "<header class=\"ds-top\"><a class=\"ds-top-name\" href=\"#\">Brian Rodriguez</a><nav class=\"ds-top-nav\"><a href=\"#\">Habilidades</a><a href=\"#\">Experiencia</a><a href=\"#\" aria-current=\"page\">Blog</a></nav><a class=\"ds-top-btn\" href=\"#\">Escribirme</a></header>",
+      "css": ".ds-top { display: flex; align-items: center; gap: 2rem; padding: 1.1rem 1.5rem; background: var(--paper, #f7f9f6); color: var(--ink, #0f1f18); font: 1.0625rem/1.6 'Onest', system-ui, sans-serif; } .ds-top-name { margin-right: auto; color: inherit; font-weight: 600; text-decoration: none; } .ds-top-nav { display: flex; gap: 1.5rem; font-size: 0.95rem; } .ds-top-nav a { padding-block: 0.6rem; color: var(--muted, #4a5c53); text-decoration: none; } .ds-top-nav a:hover { color: var(--ink, #0f1f18); text-decoration: underline; text-underline-offset: 0.35em; } .ds-top-nav a[aria-current] { color: var(--ink, #0f1f18); font-weight: 500; box-shadow: inset 0 -1.5px 0 var(--ink, #0f1f18); } .ds-top-btn { display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0 1rem; background: var(--layer-3, #0c2f23); color: var(--on-dark, #fff); border: 1.5px solid var(--layer-3, #0c2f23); border-radius: 6px; font-size: 0.9rem; font-weight: 500; text-decoration: none; } .ds-top-btn:hover { background: var(--layer-2, #1b5a41); border-color: var(--layer-2, #1b5a41); } .ds-top a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }"
+    },
+    {
+      "name": "Ring Diagram",
+      "kind": "custom",
+      "refersTo": "ring-diagram",
+      "description": "The hero figure: four nested layers, each a link to its section, with the core naming the person.",
+      "html": "<figure class=\"ds-rings\"><a class=\"ds-ring ds-ring-3\" href=\"#\"><span>Open source y blog</span></a><a class=\"ds-ring ds-ring-2\" href=\"#\"><span>Experiencia</span></a><a class=\"ds-ring ds-ring-1\" href=\"#\"><span>Habilidades</span></a><a class=\"ds-ring ds-ring-0\" href=\"#\"><strong>Brian</strong><span>desde 2014</span></a></figure>",
+      "css": ".ds-rings { position: relative; width: 100%; max-width: 22rem; aspect-ratio: 1 / 1; margin: 0; font-family: 'Onest', system-ui, sans-serif; } .ds-ring { position: absolute; display: block; border-radius: 14px; text-decoration: none; transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1); } .ds-ring span { position: absolute; top: 0.7rem; left: 1rem; font: 0.8rem/1.6 'JetBrains Mono', ui-monospace, monospace; } .ds-ring:hover { transform: scale(1.015); } .ds-ring:focus-visible { outline: 2px solid currentColor; outline-offset: -6px; } .ds-ring-3 { inset: 0; background: var(--layer-3, #0c2f23); color: var(--on-dark, #fff); } .ds-ring-2 { inset: 13%; background: var(--layer-2, #1b5a41); color: var(--on-dark, #fff); } .ds-ring-1 { inset: 26%; background: var(--layer-1, #cfe3d6); color: var(--ink, #0f1f18); } .ds-ring-0 { inset: 37%; display: grid; place-content: center; padding: 0.25rem; background: var(--layer-0, #fff); color: var(--ink, #0f1f18); border-radius: 10px; text-align: center; } .ds-ring-0 strong { font-size: 1.05rem; font-weight: 600; letter-spacing: -0.02em; } .ds-ring-0 span { position: static; color: var(--muted, #4a5c53); font-size: 0.7rem; line-height: 1.35; }"
+    },
+    {
+      "name": "Layer Heading with Ring Glyph",
+      "kind": "custom",
+      "refersTo": "ring-glyph",
+      "description": "A layer heading preceded by the four-ring glyph, with that layer's ring emphasised (here layer 2).",
+      "html": "<h2 class=\"ds-layer-h\"><svg class=\"ds-ring-icon\" viewBox=\"0 0 32 32\" width=\"32\" height=\"32\" aria-hidden=\"true\"><rect x=\"2\" y=\"2\" width=\"28\" height=\"28\" rx=\"5\"/><rect class=\"ds-is-on\" x=\"6\" y=\"6\" width=\"20\" height=\"20\" rx=\"4\"/><rect x=\"10\" y=\"10\" width=\"12\" height=\"12\" rx=\"3\"/><rect x=\"14\" y=\"14\" width=\"4\" height=\"4\" rx=\"2\"/></svg>Experiencia</h2>",
+      "css": ".ds-layer-h { display: flex; align-items: center; gap: 0.8rem; margin: 0; padding: 1.5rem; background: var(--layer-2, #1b5a41); color: var(--on-dark, #fff); font: 600 2rem/1.15 'Onest', system-ui, sans-serif; letter-spacing: -0.02em; } .ds-ring-icon { flex: none; } .ds-ring-icon rect { fill: none; stroke: currentColor; stroke-width: 1.5; opacity: 0.45; } .ds-ring-icon .ds-is-on { stroke-width: 3.2; opacity: 1; }"
+    },
+    {
+      "name": "Ruled Row",
+      "kind": "custom",
+      "refersTo": "row",
+      "description": "The repeated-item pattern: a 14rem mono label column and a content column under a 1.5px rule, on the layer ground.",
+      "html": "<div class=\"ds-row\"><p class=\"ds-row-period\">2020 – Presente</p><div><h3>Android Developer</h3><p class=\"ds-row-org\">BCI (cliente) · Nisum</p></div></div>",
+      "css": ".ds-row { display: grid; grid-template-columns: 14rem minmax(0, 1fr); gap: 1rem; padding: 2rem 1.5rem; background: var(--layer-2, #1b5a41); color: var(--on-dark, #fff); border-top: 1.5px solid var(--rule-on-dark, rgba(255, 255, 255, 0.55)); font: 1.0625rem/1.6 'Onest', system-ui, sans-serif; } .ds-row p, .ds-row h3 { margin: 0; } .ds-row-period { font: 0.95rem/1.6 'JetBrains Mono', ui-monospace, monospace; } .ds-row h3 { font-size: 1.4rem; font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; } .ds-row-org { opacity: 0.88; }"
+    },
+    {
+      "name": "Code Block",
+      "kind": "custom",
+      "refersTo": "code-block",
+      "description": "Article code block on the outermost layer ground, with inline code on tint.",
+      "html": "<div class=\"ds-prose\"><p>Ejecutamos <code>git config --global</code> para ver la configuración.</p><pre><code>git config --global core.editor \"code --wait\"</code></pre></div>",
+      "css": ".ds-prose { color: var(--ink, #0f1f18); font: 1.0625rem/1.6 'Onest', system-ui, sans-serif; } .ds-prose p { margin: 0 0 1rem; } .ds-prose code { padding: 0.12em 0.4em; background: var(--tint, #e9f1eb); border-radius: 4px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.86em; } .ds-prose pre { margin: 0; padding: 1rem 1.1rem; background: var(--layer-3, #0c2f23); color: var(--on-dark, #fff); border-radius: 6px; overflow-x: auto; } .ds-prose pre code { padding: 0; background: none; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Layer Diagram",
+    "overview": "The site is a Clean Architecture diagram of a person. Identity sits at the core and each section of the home page is one layer further out: profile, skills, experience, then open source and writing. The structure is the argument, so the system has very few moving parts: four grounds that deepen as the layers move outward, one rule weight, one figure (nested rounded squares), and two typefaces that split cleanly between prose and facts.\n\nThe mood is sober and technical without wearing a costume. It is a light page on a paper ground whose depth comes from full-width bands of green, not from a dark canvas, glow, or terminal styling. Density is moderate: generous vertical room between layers (4.5rem), tight ruled rows inside them. Everything a reader needs is typeset; there is no decorative imagery and no icon set beyond the four-ring glyph.\n\nThe blog index and the article belong to the outermost layer. They open with its ground as a page header and then hand over to paper for reading at a narrower measure.",
+    "keyCharacteristics": [
+      "One green, four depths, each depth bound to one architecture layer.",
+      "Flat surfaces: depth is tonal, never cast.",
+      "A single rule weight (1.5px) separates rows; there are no cards.",
+      "Sans for sentences, mono for facts (technology names, dates, periods, labels).",
+      "Nested rounded squares are the only drawn figure, at hero size and at 32px.",
+      "Light scheme only (`color-scheme: light`); the home page also prints as an ink-on-paper CV."
+    ],
+    "rules": [
+      { "name": "The Depth Is The Layer Rule", "body": "A ground is not a mood choice. `layer-0` through `layer-3` appear as section grounds in order, from the core outward, and a surface takes the ground of the layer it belongs to. Blog and article headers use `layer-3` because writing lives in the outermost layer.", "section": "colors" },
+      { "name": "The One Hue Rule", "body": "Every colour is the same green at a different depth. Emphasis comes from depth and weight, never from a second hue. Content images inside an article (a logo, a screenshot) are content and are exempt.", "section": "colors" },
+      { "name": "The Two Text Colours Per Ground Rule", "body": "Light grounds carry `ink` and `muted`; dark grounds carry `on-dark` at full or slightly reduced opacity. `muted` is never placed on `layer-2` or `layer-3`, and `accent` text is never placed on `layer-1`'s darker neighbours.", "section": "colors" },
+      { "name": "The Mono Means Data Rule", "body": "JetBrains Mono marks a fact a reader could check: a technology, a date, a period, a package name, code. It is never used for sentences or for headings.", "section": "typography" },
+      { "name": "The Sentence Case Rule", "body": "Labels are set in sentence case at natural tracking. The build contains no uppercase or letter-spaced text.", "section": "typography" },
+      { "name": "The Three Weights Rule", "body": "400 for reading, 500 for links, actions and definition values, 600 for headings. Nothing heavier is loaded.", "section": "typography" },
+      { "name": "The Tonal Depth Rule", "body": "If something needs to feel nearer or further, change its ground to the next layer colour. Do not add a cast shadow.", "section": "elevation" },
+      { "name": "The One Figure Rule", "body": "The interface draws exactly one shape, the nested rounded square. New markers or diagrams are built from it rather than from a second icon vocabulary.", "section": "shapes" },
+      { "name": "The Rows Not Cards Rule", "body": "Repeated items are separated by a 1.5px rule above each row and sit directly on the layer ground. The build contains no bordered or filled card containers.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do give a new section the ground of the layer it belongs to, and keep the grounds in order from `layer-0` outward.",
+      "Do separate repeated items with a 1.5px rule above each row, on the layer ground.",
+      "Do set technology names, dates, periods and package names in JetBrains Mono, in sentence case.",
+      "Do use `on-dark` text and `rule-on-dark` rules on `layer-2` and `layer-3`, and `ink` with `muted` on the light grounds.",
+      "Do show selection by inverting fill and text (pressed chip, matching tag), and keep the 2px `currentColor` focus outline on every interactive element.",
+      "Do keep one primary button per view, in `layer-3`, for the contact action.",
+      "Do hold running text to 62ch and reading pages to a 46rem column.",
+      "Do gate every transition behind `prefers-reduced-motion: no-preference`, as the build does.",
+      "Do check that anything added to the home page still prints as plain ink on paper."
+    ],
+    "donts": [
+      "Don't introduce a second hue for emphasis, status or links; use a different depth of the green or a heavier weight.",
+      "Don't add cast shadows, glows, blurs or gradients; depth is a change of ground.",
+      "Don't wrap rows in bordered or filled cards.",
+      "Don't set sentences or headings in the mono face.",
+      "Don't put `muted` text on the dark grounds; lower the opacity of `on-dark` slightly instead.",
+      "Don't add a second icon vocabulary; the nested rounded square is the only drawn figure.",
+      "Don't switch the page to a dark canvas with a bright accent; the site is light, and only the two outer layers are dark."
+    ]
+  }
+}

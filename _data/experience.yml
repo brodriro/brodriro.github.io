@@ -1,40 +1,24 @@
-# Experience template
-- layout: left
-  company: Nisum Chile
-  link: https://www.nisumlatam.com/
-  job_title: Android Developer
-  dates: Sep 2020 - present
-  quote: >
-   Android Developer
-  description: | # this will include new lines to allow paragraphs
-    Desarrollador android con <mark>Java</mark> y <mark>Kotlin</mark>, para diferentes clientes nacionales y extranjeros.
+- role: Android Developer
+  org: BCI (cliente) · Nisum
+  period: 2020 – Presente
+  bullets:
+    - Desarrollo de nuevas funcionalidades y soporte de soluciones existentes en aplicaciones Android, con foco en escalabilidad y rendimiento.
+    - Colaboración con equipos multidisciplinarios para implementar soluciones móviles alineadas con los objetivos del cliente.
+    - Aplicación de Clean Architecture, pruebas unitarias con Mockito, análisis de calidad con SonarQube y entrega continua con Jenkins.
+  tech: [Java, Kotlin, Security, Mockito, Unit Test, Jenkins, Git, Clean Architecture, CI/CD, Android Studio, Jira, Confluence, Salesforce, SonarQube]
 
-- layout: left
-  company: Everis Perú
-  link: https://pe.nttdata.com/
-  job_title: Full Stack Developer
-  dates: Dic 2019 - Sep 2020
-  quote: >
-   Full Stack Developer
-  description: | # this will include new lines to allow paragraphs
-    Desarrollo y mantenimiento de proyectos realizados en <mark>Java</mark>, tanto en el desarrollo backend como frontend. De la misma forma creando y manteniendo aplicaciones móviles <mark>Android</mark> para diversos clientes nacionales y extranjeros.
+- role: Center Developer
+  org: EverisYou · NTT DATA
+  period: 2018 – 2020
+  bullets:
+    - Contribución al desarrollo de una red social interna corporativa, en conjunto con equipos distribuidos en España, Chile, Brasil y México.
+    - Implementación de mejoras basadas en buenas prácticas de arquitectura y cumplimiento de los estándares de calidad definidos.
+  tech: [Android, Java, Git, Clean Architecture, SonarQube, Lint, Jira, Node.js]
 
-- layout: left
-  company: Everis Perú
-  link: https://pe.nttdata.com/
-  job_title: Android Developer
-  dates: Octubre 2018 - Dic 2019
-  quote: >
-   Android Developer
-  description: | # this will include new lines to allow paragraphs
-    Desarrollo y mantenimiento de aplicaciones móviles <mark>Android</mark> con <mark>Java</mark> y <mark>Flutter</mark> para diversos clientes nacionales y extranjeros.
-
-- layout: left
-  company: CleverClouds Perú
-  link: http://www.cleverclouds.im/
-  job_title: Full Stack Developer
-  dates: Sep 2014 - Oct 2018
-  quote: >
-   Full Stack Developer
-  description: | # this will include new lines to allow paragraphs
-    Desarrollo y mantenimiento de proyectos realizados en <mark>Javascript</mark> con <mark>NodeJs</mark> para backend y frontend, así también creando aplicaciones móviles <mark>Android</mark> para diversos clientes.
+- role: Fullstack Developer
+  org: CleverClouds
+  period: 2014 – 2018
+  bullets:
+    - Liderazgo del desarrollo de soluciones para clientes de los sectores de restauración, logística y aplicaciones para mascotas, cubriendo backend y frontend.
+    - Implementación de funcionalidades clave en aplicaciones web y móviles, cuidando su correcto funcionamiento y escalabilidad.
+  tech: [Node.js, Android, Java, JavaScript, MySQL, React Native, Ubuntu, Bash, Git, npm, Firebase, Google Analytics, Facebook for Business, SEO, SEM]

@@ -1,0 +1,2 @@
+{%- assign tech_key = site.data.tech_aliases[include.name] | default: include.name | downcase -%}
+{{- tech_key | escape -}}

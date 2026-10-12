@@ -1,0 +1,178 @@
+// Blog index and article. Both belong to the outermost layer, so they open
+// with its ground and then hand over to paper for reading.
+
+.page-head {
+  padding: 3.5rem 0 3rem;
+  background: var(--layer-3);
+  color: var(--on-dark);
+
+  .wrap,
+  & + .page-body {
+    max-width: 46rem;
+  }
+
+  h1 {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: clamp(2rem, calc(1.4rem + 2.6vw), 3rem);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+  }
+
+  ::selection {
+    background: var(--on-dark);
+    color: var(--layer-3);
+  }
+}
+
+.page-head__meta {
+  margin-top: 0.9rem;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.page-body {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.post-list {
+  li {
+    padding: 1.75rem 0;
+    border-top: var(--rule) solid var(--ink);
+
+    &:first-child {
+      padding-top: 0;
+      border-top: 0;
+    }
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.post-list__date {
+  margin: 0.3rem 0 0.7rem;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.85rem;
+}
+
+.post__image {
+  display: block;
+  max-height: 13rem;
+  margin: 0 auto 2.5rem;
+}
+
+.post__footer {
+  margin-top: 3.5rem;
+  padding-top: 1.25rem;
+  border-top: var(--rule) solid var(--ink);
+  font-weight: 500;
+}
+
+.prose {
+  > * + * {
+    margin-top: 1rem;
+  }
+
+  h2 {
+    margin-top: 3rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  h3 {
+    margin-top: 2rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+  }
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  a {
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  ul,
+  ol {
+    padding-left: 1.3rem;
+  }
+
+  ul {
+    list-style: square;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  li + li,
+  li > ul,
+  li > ol {
+    margin-top: 0.5rem;
+  }
+
+  li::marker {
+    color: var(--accent);
+  }
+
+  code {
+    padding: 0.12em 0.4em;
+    background: var(--tint);
+    border-radius: 4px;
+    font-size: 0.86em;
+    overflow-wrap: anywhere;
+  }
+
+  h2 code,
+  h3 code {
+    font-size: 0.8em;
+  }
+
+  pre {
+    padding: 1rem 1.1rem;
+    background: var(--layer-3);
+    color: var(--on-dark);
+    border-radius: var(--radius);
+    overflow-x: auto;
+
+    code {
+      padding: 0;
+      background: none;
+      overflow-wrap: normal;
+    }
+  }
+
+  blockquote {
+    padding: 1rem 1.25rem;
+    background: var(--layer-1);
+    border-radius: var(--radius);
+    font-size: 1.1rem;
+  }
+
+  mark {
+    background: none;
+    color: inherit;
+    font-weight: 600;
+  }
+}

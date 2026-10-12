@@ -1,55 +1,12 @@
-{%- comment -%} key | profile URL prefix | Font Awesome brand icon | label {%- endcomment -%}
-{%- assign networks = "dribbble|https://dribbble.com/|fa-dribbble|Dribbble,facebook|https://www.facebook.com/|fa-facebook|Facebook,flickr|https://www.flickr.com/photos/|fa-flickr|Flickr,github|https://github.com/|fa-github|GitHub,stackoverflow|https://stackoverflow.com/users/|fa-stack-overflow|Stack Overflow,instagram|https://www.instagram.com/|fa-instagram|Instagram,linkedin|https://www.linkedin.com/in/|fa-linkedin|LinkedIn,xing|https://www.xing.com/profile/|fa-xing|Xing,pinterest|https://www.pinterest.com/|fa-pinterest|Pinterest,twitter|https://twitter.com/|fa-twitter|Twitter,youtube|https://www.youtube.com/|fa-youtube|YouTube,orcid|https://orcid.org/|fa-orcid|ORCID" | split: "," -%}
-{%- assign is_home = false -%}
-{%- if page.layout == 'default' -%}{%- assign is_home = true -%}{%- endif -%}
+{%- assign home = '/' | relative_url -%}
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
-<header class="container site-header">
-  {%- if site.posts.size > 0 %}
-  <nav class="site-nav no-print" aria-label="Principal">
-    <a href="{{ '/' | relative_url }}"{% if is_home %} aria-current="page"{% endif %}>Inicio</a>
+<header class="top">
+  <a class="top__name" href="{{ home }}"{% if page.layout == 'default' %} aria-current="page"{% endif %}>{{ site.name | escape }}</a>
+  <nav class="top__nav" aria-label="Principal">
+    <a href="{{ home }}#habilidades">Habilidades</a>
+    <a href="{{ home }}#experiencia">Experiencia</a>
+    <a href="{{ home }}#open-source">Open source</a>
     <a href="{{ '/blog.html' | relative_url }}"{% if page.layout == 'blog' %} aria-current="page"{% elsif page.layout == 'post' %} aria-current="true"{% endif %}>Blog</a>
   </nav>
-  {%- endif %}
-  <div class="site-header__row">
-    <div class="site-header__identity">
-      {%- if is_home %}
-      <h1 class="site-name">{{ site.name | escape }}</h1>
-      {%- else %}
-      <p class="site-name"><a href="{{ '/' | relative_url }}">{{ site.name | escape }}</a></p>
-      {%- endif %}
-      <p class="site-role">{{ site.title | escape }}</p>
-    </div>
-    <div class="site-header__contact">
-      <ul class="social no-print">
-        {%- for network in networks -%}
-          {%- assign parts = network | split: "|" -%}
-          {%- assign key = parts[0] | append: "_username" -%}
-          {%- assign username = site[key] -%}
-          {%- if username %}
-        <li>
-          <a class="social__link" href="{{ parts[1] }}{{ username | cgi_escape | escape }}" target="_blank" rel="noopener" aria-label="{{ parts[3] }}" title="{{ parts[3] }}">
-            <i class="fab {{ parts[2] }}" aria-hidden="true"></i>
-          </a>
-        </li>
-          {%- endif -%}
-        {%- endfor -%}
-        {%- for link in site.additional_links %}
-        <li>
-          {% include a.html href=link.url class="social__link" label=link.title %}
-            <i class="fab {{ link.icon }}" aria-hidden="true"></i>
-          </a>
-        </li>
-        {%- endfor %}
-      </ul>
-      {%- if site.email %}
-      <p>Correo: <a href="mailto:{{ site.email }}">{{ site.email | escape }}</a></p>
-      {%- endif -%}
-      {%- if site.phone %}
-      <p>Teléfono: <a href="tel:{{ site.phone | remove: ' ' }}">{{ site.phone | escape }}</a></p>
-      {%- endif -%}
-      {%- if site.website %}
-      <p>Web: {% include a.html href=site.website %}{{ site.website | escape }}</a></p>
-      {%- endif %}
-    </div>
-  </div>
+  <a class="btn btn--small" href="mailto:{{ site.email }}">Escribirme</a>
 </header>

@@ -1,55 +1,188 @@
+// The home page doubles as a printed CV: no grounds, ink on paper.
 @media print {
-  :root,
-  body.dark {
-    @include light-tokens;
-    --fg: #000;
-    --muted: #333;
-    --accent: #000;
-  }
-
   body {
-    font-size: 0.875rem;
+    background: none;
+    color: #000;
+    font-size: 0.82rem;
+    line-height: 1.45;
   }
 
   .no-print,
-  .skip-link {
+  .skip-link,
+  .top,
+  .foot {
     display: none !important;
   }
 
-  .container {
+  .print-only {
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  .wrap,
+  .hero {
     max-width: none;
     padding-inline: 0;
   }
 
-  .site-header {
-    padding-top: 0;
+  .hero {
+    display: block;
+    padding: 0 0 1rem;
+
+    h1 {
+      font-size: 2.2rem;
+    }
   }
 
-  .section {
-    margin-top: var(--space-6);
+  .hero__role {
+    margin-top: 0.3rem;
+    color: #000;
   }
 
-  .section-title {
-    margin-bottom: var(--space-4);
-    font-size: 1.5rem;
+  .hero__lead {
+    max-width: none;
+    margin-top: 0.6rem;
+    font-size: 1rem;
   }
 
-  .item {
+  .layer,
+  .page-head {
+    padding: 0.9rem 0 0;
+    background: none;
+    color: #000;
+
+    h2 {
+      margin-bottom: 0.6rem;
+      font-size: 1.2rem;
+    }
+
+    .h2--second {
+      margin-top: 1.25rem;
+    }
+  }
+
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+
+  .ring-icon {
+    display: none;
+  }
+
+  .pkgs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 2rem;
+  }
+
+  .prose-lead {
+    max-width: none;
+    font-size: inherit;
+  }
+
+  .facts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 0.8rem;
+    padding-top: 0.6rem;
+    border-color: #000;
+
+    dt {
+      color: #000;
+    }
+  }
+
+  .skill-row {
+    grid-template-columns: 13rem minmax(0, 1fr);
+    padding: 0.3rem 0;
+    border-color: #000;
+  }
+
+  .chip,
+  .chip--static {
+    padding: 0 0.3rem;
+    background: none;
+    border: 1px solid #000;
+    font-size: 0.72rem;
+  }
+
+  .job {
+    grid-template-columns: 8rem minmax(0, 1fr);
+    padding: 0.7rem 0;
+    border-color: #000;
+    break-inside: avoid;
+
+    &.is-dim {
+      opacity: 1;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+    }
+  }
+
+  .job__org {
+    margin-bottom: 0.4rem;
+    opacity: 1;
+  }
+
+  .job__bullets {
+    max-width: none;
+
+    li {
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  .post-teaser h3 {
+    font-size: 1rem;
+  }
+
+  .pkg.is-dim {
+    opacity: 1;
+  }
+
+  .tech-tags {
+    margin-top: 0.4rem;
+    gap: 0.15rem 0.3rem;
+    font-size: 0.72rem;
+
+    li,
+    .is-hit {
+      padding: 0 0.25rem;
+      background: none;
+      border-color: #000;
+      color: #000;
+    }
+  }
+
+  .pkg,
+  .post-teaser {
+    padding: 0.5rem 0;
+    border-color: #000;
     break-inside: avoid;
   }
 
-  .item + .item {
-    margin-top: var(--space-5);
+  .pkg__links a::after {
+    content: " (" attr(href) ")";
+    font-weight: 400;
   }
 
-  // Browsers drop backgrounds when printing; keep chips legible.
-  mark {
-    color: #000;
-    background: none;
-    border: 1px solid #000;
+  .pkg__links {
+    flex-direction: column;
+    gap: 0;
   }
 
   a {
     text-decoration: none;
+  }
+
+  .prose pre,
+  .prose blockquote,
+  .prose code,
+  .prose mark {
+    background: none;
+    color: #000;
+    border: 1px solid #000;
   }
 }

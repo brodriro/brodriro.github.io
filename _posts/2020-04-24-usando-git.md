@@ -24,7 +24,7 @@ Ejecutamos `git config --global user.name "Brian Rodriguez"` para añadir un nom
 Luego `git config --global user.name` para visualizar el nombre de usuario.
 
 ### Cambiar email de usuario
-Ejecutamos `git config --global user.email "rzknairb@gmail.com"` para añadir un email de usuario.
+Ejecutamos `git config --global user.email "brian.rodriro@gmail.com"` para añadir un email de usuario.
 
 Luego `git config --global user.email` para visualizar el email de usuario.
 
@@ -34,7 +34,7 @@ El comando `git config --global` es para manejar las configuraciones a nivel glo
 Existe también `git config --local` para manejar las configuraciones para un repositorio en específico.
 
 ### Cambiar de editor predeterminado
-Por defecto <mark>GIT</mark> trabaja con un editor predeterminado que es <mark>VIM</mark> con el cual pocos están acostumbrados a usar por su complejidad, sin embargo es importante manejar adecuadamente los mensajes de <mark>GIT</mark> a través del editor, ya sea por un <mark> merge </mark> o por conflictos entre las ramas.
+Por defecto <mark>GIT</mark> trabaja con un editor predeterminado que es <mark>VIM</mark> con el cual pocos están acostumbrados a usar por su complejidad, sin embargo es importante manejar adecuadamente los mensajes de <mark>GIT</mark> a través del editor, ya sea por un <mark>merge</mark> o por conflictos entre las ramas.
 
 Podemos cambiar el editor de forma sencilla:
 
@@ -43,7 +43,7 @@ Podemos cambiar el editor de forma sencilla:
 + Cambiar a Atom `git config --global core.editor "atom --wait"`
 
 ## Inicializar proyecto GIT (`git init`)
-Éste método solo se usa cuando tenemos un proyecto local y queremos migrar o empezar a utilizar <mark> GIT</mark>. Para ello usaremos el comando `git init`, ésto generará la configuración inicial de git con lo cual ya podremos hacer uso de otros comandos como `git status`, `git commit` y `git push` entre los más básicos.
+Éste método solo se usa cuando tenemos un proyecto local y queremos migrar o empezar a utilizar <mark>GIT</mark>. Para ello usaremos el comando `git init`, ésto generará la configuración inicial de git con lo cual ya podremos hacer uso de otros comandos como `git status`, `git commit` y `git push` entre los más básicos.
 
 ## Clonar Repositorio (`git clone`)
 Con git existen 2 maneras de descargar un repositorio:
@@ -73,7 +73,7 @@ Existen varios modos de enviar cambios al repositorio remoto, sin embargo la sen
 - `develop` - Se indica el nombre de la rama a la cual se enviarán los commits realizados.
 
 Sentencia completa:
-+ `git push origin develop` - Envía los cambios a la rama <mark> develop </mark> del repositorio remoto.
++ `git push origin develop` - Envía los cambios a la rama <mark>develop</mark> del repositorio remoto.
 + `git push --all` - Este comando envía o sube al servidor todas las ramas locales que existan.
 
 ## Actualizar o bajar cambios del servidor (`git pull`)
@@ -90,7 +90,7 @@ Este comando nos brinda el nombre del repositorio de la fuente de datos.
 
 + `git remote` - Informa el nombre del asignado a la fuente de datos.
 + `git remote -v` - Informa sobre la url de conexión a la fuente de datos, puede ser una conexión HTTP o SSH.
-+ `git remote add <nombre_de_origen> <url_fuente_datos>` - Podemos añadir una nueva fuente de datos. <mark> nombre_de_origen </mark> debe ser reemplazado por el nombre correspondiente, generalmente y por defecto es `origin`, <mark>url_fuente_datos</mark> siempre será la url del repositorio remoto. Al final deberá quedar de la siguiente forma:
++ `git remote add <nombre_de_origen> <url_fuente_datos>` - Podemos añadir una nueva fuente de datos. <mark>nombre_de_origen</mark> debe ser reemplazado por el nombre correspondiente, generalmente y por defecto es `origin`, <mark>url_fuente_datos</mark> siempre será la url del repositorio remoto. Al final deberá quedar de la siguiente forma:
     - `git remote add origin_two https://gitlab.com/rzkbrian.git`.
 + `git remote remove <nombre_de_origen>` - Elimina la fuente de datos del repositorio local.
 

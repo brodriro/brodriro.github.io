@@ -1,0 +1,12 @@
+- category: Lenguajes
+  items: [Kotlin, Java, JavaScript, TypeScript, Dart]
+- category: Móvil
+  items: [Android SDK, Jetpack Compose, Flutter, React Native]
+- category: Arquitectura y calidad
+  items: [Clean Architecture, SOLID, Mockito, Unit Testing, SonarQube, Lint]
+- category: DevOps y herramientas
+  items: [Git, GitHub, Jenkins, CI/CD, Android Studio, Jira, Confluence]
+- category: Backend y datos
+  items: [Node.js, SQL, MySQL, Firebase]
+- category: IA generativa
+  items: [Prompt Engineering, LLMs, Claude, Agentes de IA]

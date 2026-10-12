@@ -1,0 +1,131 @@
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--space-5);
+}
+
+// Header -------------------------------------------------------------------
+
+.site-header {
+  padding-top: var(--space-5);
+}
+
+.site-nav {
+  display: flex;
+  gap: var(--space-5);
+  margin-bottom: var(--space-5);
+  font-size: 0.9375rem;
+
+  a {
+    padding-block: var(--space-2);
+    color: var(--muted);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--fg);
+    }
+
+    &[aria-current] {
+      color: var(--fg);
+      font-weight: 500;
+      box-shadow: inset 0 -2px 0 var(--fg);
+    }
+  }
+}
+
+.site-header__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5) var(--space-6);
+}
+
+.site-name {
+  margin: 0;
+  font-size: clamp(2rem, calc(1.4rem + 3vw), 2.75rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.site-role {
+  margin: var(--space-1) 0 0;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.site-header__contact {
+  text-align: right;
+
+  p {
+    margin: 0;
+  }
+
+  p a {
+    color: inherit;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 40rem) {
+  .site-nav,
+  .site-header__row {
+    justify-content: center;
+  }
+
+  .site-header__identity,
+  .site-header__contact {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+// Sections -----------------------------------------------------------------
+
+.section {
+  margin-top: var(--space-8);
+}
+
+.section-title {
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-3);
+  border-bottom: 2px dashed var(--rule);
+  font-size: 1.875rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: var(--details-col) minmax(0, 1fr);
+  gap: var(--space-4) var(--space-6);
+  align-items: start;
+}
+
+@media (max-width: 48rem) {
+  .split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+// Footer -------------------------------------------------------------------
+
+.site-footer {
+  margin-top: var(--space-8);
+  padding-bottom: var(--space-7);
+  color: var(--muted);
+  font-style: italic;
+  font-weight: 300;
+  text-align: center;
+
+  a {
+    color: inherit;
+  }
+}

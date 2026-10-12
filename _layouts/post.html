@@ -7,7 +7,7 @@
 
     {%- include header.html -%}
 
-    <main class="page-content" aria-label="Content">
+    <main id="contenido" class="page-content" tabindex="-1">
         <div class="wrapper">
 
             {%- if jekyll.environment == 'production' and site.gtm -%}
@@ -15,35 +15,24 @@
             {%- endif -%}
 
 
-            <div id="main">
-                <!-- Post -->
-                <article class="shade-two">
-                    <div class="container">
-                        <header>
-                            <h2>{{- page.title -}}</h2>
-                            <p>{% if page.author %}{{ page.author }}, {% endif %}
-                                {{- page.date | date_to_long_string -}}
-                            </p>
-                        </header>
-                        {% if page.image %}
-                        <div class="row">
-                            <div class="col-sm-1"></div>
-                            <div class="col-sm-10 margin-40 center">
-                                <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}" class="image-header-blog">
-                            </div>
-                        </div>
-                        {% endif %}
-
-                        <div class="row">
-                            <div class="col-sm-1"></div>
-                            <div class="col-sm-10">
-                                {{- content -}}
-                            </div>
-                        </div>
-                        
-                    </div>
-                </article>
-            </div>
+            <article class="container section post">
+                <header class="post__header">
+                    <h1 class="post__title">{{ page.title | escape }}</h1>
+                    <p class="post-meta">
+                        {%- if page.author -%}{{ page.author | escape }} · {% endif -%}
+                        {%- include date-es.html date=page.date -%}
+                    </p>
+                </header>
+                {% if page.image %}
+                <img class="post__image" src="{{ page.image | relative_url }}" alt="">
+                {% endif %}
+                <div class="prose">
+                    {{- content -}}
+                </div>
+                <footer class="post__footer no-print">
+                    <a href="{{ '/blog.html' | relative_url }}">Volver al blog</a>
+                </footer>
+            </article>
 
 
             {%- if site.more_content -%}
@@ -54,7 +43,6 @@
     </main>
 
     {%- include footer.html -%}
-    <script src="{{ '/assets/js/index.js' | relative_url }}"></script>
 </body>
 
 </html>

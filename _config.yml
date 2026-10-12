@@ -3,6 +3,7 @@ repository: brodriro/rzkbrian.github.io
 favicon: assets/images/android.png
 
 lang: es
+description: Desarrollador Android especializado en Java y Kotlin. Proyectos personales, experiencia y blog.
 
 # Personal info
 name: Brian Rodríguez

@@ -1,0 +1,262 @@
+// Social icon buttons ------------------------------------------------------
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  margin: 0 0 var(--space-3);
+  padding: 0;
+  list-style: none;
+}
+
+.social__link {
+  display: grid;
+  place-items: center;
+  width: 2.875rem;
+  height: 2.875rem;
+  border-radius: 50%;
+  background: var(--fg);
+  color: var(--bg);
+  box-shadow: inset 0 0 0 2px var(--fg);
+  font-size: 1.375rem;
+  text-decoration: none;
+
+  &:hover {
+    background: transparent;
+    color: var(--fg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .social__link {
+    transition: background-color 200ms ease, color 200ms ease;
+  }
+}
+
+@media (max-width: 40rem) {
+  .social {
+    justify-content: center;
+  }
+}
+
+// About --------------------------------------------------------------------
+
+.profile-img {
+  display: block;
+  width: 12.5rem;
+  height: 12.5rem;
+  margin-inline: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about__content {
+  max-width: var(--measure);
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: var(--space-2);
+  }
+}
+
+// Resume items (projects, experience, education) ---------------------------
+
+.item + .item {
+  margin-top: var(--space-7);
+}
+
+.item__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.item__details {
+  p {
+    margin: var(--space-1) 0 0;
+    font-weight: 300;
+  }
+
+  b {
+    font-weight: 500;
+  }
+
+  a {
+    color: inherit;
+    overflow-wrap: anywhere;
+  }
+}
+
+.item__link {
+  font-style: italic;
+}
+
+.item__repo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 2.75rem;
+
+  i {
+    font-size: 1.25rem;
+  }
+}
+
+.item__body {
+  max-width: var(--measure);
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.item__quote {
+  color: var(--muted);
+  font-style: italic;
+  font-weight: 300;
+}
+
+.item--right {
+  grid-template-columns: minmax(0, 1fr) var(--details-col);
+
+  .item__details {
+    order: 2;
+    text-align: right;
+  }
+}
+
+.item--top,
+.item--top-middle,
+.item--top-right {
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-3);
+}
+
+.item--top-middle {
+  .item__details {
+    text-align: center;
+  }
+
+  .item__body {
+    margin-inline: auto;
+  }
+}
+
+.item--top-right .item__details {
+  text-align: right;
+}
+
+@media (max-width: 48rem) {
+  .item--right {
+    grid-template-columns: minmax(0, 1fr);
+
+    .item__details {
+      order: 0;
+      text-align: left;
+    }
+  }
+}
+
+// Blog ---------------------------------------------------------------------
+
+.page-title {
+  font-size: 1.875rem;
+  font-weight: 300;
+}
+
+.post-list {
+  max-width: var(--measure);
+  margin: var(--space-6) auto 0;
+  padding: 0;
+  list-style: none;
+
+  li + li {
+    margin-top: var(--space-6);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--rule);
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.post-meta {
+  margin: var(--space-1) 0 var(--space-3);
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.post__header,
+.post__footer,
+.blog-header,
+.prose {
+  max-width: var(--measure);
+  margin-inline: auto;
+}
+
+.post__title {
+  font-size: clamp(1.875rem, calc(1.4rem + 2.4vw), 2.5rem);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.post__image {
+  display: block;
+  max-height: 14rem;
+  margin: var(--space-6) auto;
+  padding: var(--space-5);
+  // Post art is often a transparent logo drawn for a light page.
+  background: #fff;
+  border-radius: 6px;
+}
+
+.post__footer {
+  margin-top: var(--space-7);
+}
+
+.prose {
+  h2 {
+    margin: var(--space-7) 0 var(--space-3);
+    font-size: 1.625rem;
+    font-weight: 500;
+  }
+
+  h3 {
+    margin: var(--space-6) 0 var(--space-2);
+    font-size: 1.1875rem;
+    font-weight: 500;
+  }
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  li {
+    margin-bottom: var(--space-2);
+  }
+
+  li > ul,
+  li > ol {
+    margin-top: var(--space-2);
+  }
+
+  h2 code,
+  h3 code {
+    font-size: 0.85em;
+  }
+}

@@ -1,0 +1,43 @@
+{%- comment -%}
+  One resume entry. `item.layout` picks the arrangement:
+  left (default), right, top, top-middle, top-right.
+{%- endcomment -%}
+{%- assign item = include.item -%}
+{%- assign repo_url = "" -%}
+{%- if item.github -%}{%- assign repo_url = "https://github.com/" | append: item.github -%}{%- endif -%}
+<article class="split item item--{{ item.layout | default: 'left' }}">
+  <div class="item__details">
+    {%- if item.name -%}<h3 class="item__title">{{ item.name }}</h3>{%- endif -%}
+    {%- if item.company -%}<h3 class="item__title">{{ item.company }}</h3>{%- endif -%}
+    {%- if item.link and item.link != repo_url -%}
+      {%- assign link_text = item.link | remove_first: "https://" | remove_first: "http://" | remove_first: "www." -%}
+      {%- assign last_char = link_text | slice: -1 -%}
+      {%- if last_char == "/" -%}
+        {%- assign text_size = link_text | size | minus: 1 -%}
+        {%- assign link_text = link_text | slice: 0, text_size -%}
+      {%- endif %}
+    <p class="item__link">{% include a.html href=item.link %}{{ link_text }}</a></p>
+    {%- endif -%}
+    {%- if item.job_title %}<p><b>{{ item.job_title }}</b></p>{%- endif -%}
+    {%- if item.qualification %}<p><b>{{ item.qualification }}</b></p>{%- endif -%}
+    {%- if item.dates %}<p>{{ item.dates }}</p>{%- endif -%}
+    {%- for job in item.jobs %}
+    <p><b>{{ job.title }}</b></p>
+    <p>{{ job.dates }}</p>
+    {%- endfor -%}
+    {%- if item.github %}
+    <p>
+      <a class="item__repo" href="{{ repo_url }}" target="_blank" rel="noopener">
+        <i class="fab fa-github no-print" aria-hidden="true"></i>github.com/{{ item.github }}
+      </a>
+    </p>
+    {%- endif %}
+  </div>
+  <div class="item__body">
+    {%- assign quote = item.quote | strip -%}
+    {%- if quote != "" and quote != item.job_title %}
+    <p class="item__quote">{{ quote }}</p>
+    {%- endif %}
+    {{ item.description | strip | markdownify }}
+  </div>
+</article>

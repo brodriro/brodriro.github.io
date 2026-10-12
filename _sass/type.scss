@@ -1,85 +1,84 @@
 body {
-  color: #333;
-  font-family: Roboto, sans-serif;
+  font-family: var(--font-sans);
   font-feature-settings: "kern", "liga", "pnum";
   font-size: 1rem;
-  line-height: 1.5;
-
-  @media print {
-    font-size: 0.9rem;
-  }
+  line-height: 1.6;
 }
 
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
-  font-family: Roboto, sans-serif;
-  font-size: 1rem;
+h4 {
+  margin: 0;
   line-height: 1.2;
-  margin: 0 0 0.75rem;
+  text-wrap: balance;
 }
 
-p {
-  margin: 0 0 0.75rem; }
+p,
+ul,
+ol {
+  margin: 0 0 var(--space-3);
+}
+
+ul,
+ol {
+  padding-left: 1.4em;
+}
 
 a {
-  color: #477dca;
-  transition: color 150ms ease;
-}
-a:active,
-a:focus,
-a:hover {
-color: #355e98;
-}
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
 
-h1 {
-  font-size: 4rem;
-  margin-bottom: 0.1rem;
-  font-weight: 500;
-}
-
-h2 {
-  font-weight: 300;
-  font-size: 2rem;
-}
-
-h3 {
-  font-weight: 300;
-  font-size: 3rem;
-  text-align: center;
-  border-bottom: dashed 2px #CCCCCC;
-  padding-bottom: 10px;
-  margin-bottom:40px;
-
-  @media print {
-    margin-bottom: 20px;
+  &:hover {
+    color: var(--accent-hover);
   }
 }
 
-h4 {
-  font-weight: 300;
-  font-size:2.5rem;
-  margin-bottom:3px;
-}
-
-p, ul {
-  font-size: 1.6rem;
-  text-align: justify;
-}
-
-a i {
-  font-size:1.6rem;
+@media (prefers-reduced-motion: no-preference) {
+  a {
+    transition: color 150ms ease;
+  }
 }
 
 mark {
-  padding: 2px 4px;
-  font-size: 90%;
-  color: #fff;
-  background-color: #333;
+  display: inline-block;
+  padding: 0 0.4em;
+  font-size: 0.875em;
+  line-height: 1.55;
+  color: var(--chip-fg);
+  background: var(--chip-bg);
   border-radius: 3px;
-  -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
-  box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  padding: 0.1em 0.35em;
+  background: var(--surface);
+  border-radius: 3px;
+  overflow-wrap: anywhere;
+}
+
+pre {
+  padding: var(--space-4);
+  background: var(--surface);
+  border-radius: 4px;
+  overflow-x: auto;
+
+  code {
+    padding: 0;
+    background: none;
+    overflow-wrap: normal;
+  }
+}
+
+blockquote {
+  margin: 0 0 var(--space-5);
+  padding-left: var(--space-4);
+  border-left: 1px solid var(--rule);
+  color: var(--muted);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.125rem;
 }

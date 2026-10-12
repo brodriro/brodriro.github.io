@@ -1,126 +1,55 @@
-<div class="container header-contianer">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-8 header-left">
-      <h1>{{ site.name | escape }}</h1>
-      <h2>{{ site.title | escape }}</h2>
+{%- comment -%} key | profile URL prefix | Font Awesome brand icon | label {%- endcomment -%}
+{%- assign networks = "dribbble|https://dribbble.com/|fa-dribbble|Dribbble,facebook|https://www.facebook.com/|fa-facebook|Facebook,flickr|https://www.flickr.com/photos/|fa-flickr|Flickr,github|https://github.com/|fa-github|GitHub,stackoverflow|https://stackoverflow.com/users/|fa-stack-overflow|Stack Overflow,instagram|https://www.instagram.com/|fa-instagram|Instagram,linkedin|https://www.linkedin.com/in/|fa-linkedin|LinkedIn,xing|https://www.xing.com/profile/|fa-xing|Xing,pinterest|https://www.pinterest.com/|fa-pinterest|Pinterest,twitter|https://twitter.com/|fa-twitter|Twitter,youtube|https://www.youtube.com/|fa-youtube|YouTube,orcid|https://orcid.org/|fa-orcid|ORCID" | split: "," -%}
+{%- assign is_home = false -%}
+{%- if page.layout == 'default' -%}{%- assign is_home = true -%}{%- endif -%}
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="container site-header">
+  {%- if site.posts.size > 0 %}
+  <nav class="site-nav no-print" aria-label="Principal">
+    <a href="{{ '/' | relative_url }}"{% if is_home %} aria-current="page"{% endif %}>Inicio</a>
+    <a href="{{ '/blog.html' | relative_url }}"{% if page.layout == 'blog' %} aria-current="page"{% elsif page.layout == 'post' %} aria-current="true"{% endif %}>Blog</a>
+  </nav>
+  {%- endif %}
+  <div class="site-header__row">
+    <div class="site-header__identity">
+      {%- if is_home %}
+      <h1 class="site-name">{{ site.name | escape }}</h1>
+      {%- else %}
+      <p class="site-name"><a href="{{ '/' | relative_url }}">{{ site.name | escape }}</a></p>
+      {%- endif %}
+      <p class="site-role">{{ site.title | escape }}</p>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 header-right">
-      <ul class="icons no-print">
-        {%- if site.dribbble_username -%}
-          <li>
-            <a target="_blank" href="https://dribbble.com/{{ site.dribbble_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
-              <i class="fab fa-dribbble-square" title="Dribble link"></i>
-            </a>
-          </li>
-        {%- endif -%}
-        {%- if site.facebook_username -%}
-          <li>
-            <a target="_blank" href="https://www.facebook.com/{{ site.facebook_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
-              <i class="fab fa-facebook" title="Facebook link"></i>
-            </a>
-          </li>
-        {%- endif -%}
-        {%- if site.flickr_username -%}
-          <li>
-            <a target="_blank" href="https://www.flickr.com/photos/{{ site.flickr_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
-              <i class="fab fa-flickr" title="Flickr link"></i>
-            </a>
-          </li>
-        {%- endif -%}
-        {%- if site.github_username -%}
-          <li>
-            <a target="_blank" href="https://github.com/{{ site.github_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
-              <i class="fab fa-github" title="Github link"></i>
-            </a>
-          </li>
-        {%- endif -%}
-        {%- if site.stackoverflow_username -%}
-          <li>
-            <a target="_blank" href="https://stackoverflow.com/users/{{ site.stackoverflow_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
-              <i class="fab fa-stack-overflow" title="Stackoverflow link"></i>
-            </a>
-          </li>
-        {%- endif -%}
-        {%- if site.instagram_username -%}
-          <li>
-            <a target="_blank" href="https://www.instagram.com/{{ site.instagram_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
-              <i class="fab fa-instagram" title="Instagram link"></i>
-            </a>
-          </li>
-        {%- endif -%}
-        {%- if site.linkedin_username -%}
-          <li>
-            <a target="_blank" href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
-              <i class="fab fa-linkedin" title="Linkedin link"></i>
-            </a>
-          </li>
-        {%- endif -%}
-        {%- if site.xing_username -%}
-          <li>
-            <a target="_blank" href="https://www.xing.com/profile/{{ site.xing_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
-              <i class="fab fa-xing" title="Xing link"></i>
-            </a>
-          </li>
-        {%- endif -%}
-        {%- if site.pinterest_username -%}
-          <li>
-            <a target="_blank" href="https://www.pinterest.com/{{ site.pinterest_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
-              <i class="fab fa-pinterest" title="Pintrest link"></i>
-            </a>
-          </li>
-        {%- endif -%}
-        {%- if site.twitter_username -%}
-          <li>
-            <a target="_blank" href="https://twitter.com/{{ site.twitter_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
-              <i class="fab fa-twitter" title="Twitter link"></i>
-            </a>
-          </li>
-        {%- endif -%}
-        {%- if site.youtube_username -%}
-          <li>
-            <a target="_blank" href="https://www.youtube.com/{{ site.youtube_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
-              <i class="fab fa-youtube" title="Youtube link"></i>
-            </a>
-          </li>
-        {%- endif -%}
-        {%- if site.googleplus_username -%}
-          <li>
-            <a target="_blank" href="https://plus.google.com/{{ site.googleplus_username| escape }}" class="button button--sacnite button--round-l">
-              <i class="fab fa-google-plus" title="Google plus link"></i>
-            </a>
-          </li>
-        {%- endif -%}
-        {%- if site.orcid_username -%}
-          <li>
-            <a target="_blank" href="https://orcid.org/{{ site.orcid_username | escape }}" class="button button--sacnite button--round-l">
-              <i class="fab fa-orcid" title="ORCiD link"></i>
-            </a>
-          </li>
-        {%- endif -%}
-        {% for link in site.additional_links %}
-          <li>
-            {% include a.html href=link.url class="button button--sacnite button--round-l" %}
-              <i class="fab {{ link.icon }}" title="{{ link.title | escape }}"></i>
-            </a>
-          </li>
-        {% endfor %}
+    <div class="site-header__contact">
+      <ul class="social no-print">
+        {%- for network in networks -%}
+          {%- assign parts = network | split: "|" -%}
+          {%- assign key = parts[0] | append: "_username" -%}
+          {%- assign username = site[key] -%}
+          {%- if username %}
+        <li>
+          <a class="social__link" href="{{ parts[1] }}{{ username | cgi_escape | escape }}" target="_blank" rel="noopener" aria-label="{{ parts[3] }}" title="{{ parts[3] }}">
+            <i class="fab {{ parts[2] }}" aria-hidden="true"></i>
+          </a>
+        </li>
+          {%- endif -%}
+        {%- endfor -%}
+        {%- for link in site.additional_links %}
+        <li>
+          {% include a.html href=link.url class="social__link" label=link.title %}
+            <i class="fab {{ link.icon }}" aria-hidden="true"></i>
+          </a>
+        </li>
+        {%- endfor %}
       </ul>
-
-      {%- if site.email -%}
-        <p>
-          Email: <a href="mailto:{{ site.email }}" target="_blank">{{ site.email | escape }}</a>
-        </p>
+      {%- if site.email %}
+      <p>Correo: <a href="mailto:{{ site.email }}">{{ site.email | escape }}</a></p>
       {%- endif -%}
-      {%- if site.phone -%}
-        <p>
-          Phone: {{ site.phone | escape }}
-        </p>
+      {%- if site.phone %}
+      <p>Teléfono: <a href="tel:{{ site.phone | remove: ' ' }}">{{ site.phone | escape }}</a></p>
       {%- endif -%}
-      {%- if site.website -%}
-        <p>
-          Web: {% include a.html href=site.website %}{{ site.website | escape }}</a>
-        </p>
-      {%- endif -%}
+      {%- if site.website %}
+      <p>Web: {% include a.html href=site.website %}{{ site.website | escape }}</a></p>
+      {%- endif %}
     </div>
   </div>
-</div>
+</header>

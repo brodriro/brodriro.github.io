@@ -1,9 +1,9 @@
-<div class="container footer-container">
+<footer class="container site-footer">
   <p>
     {{ site.name | escape }} -
-    <a href="mailto:{{ site.email }}" target="_blank">{{ site.email | escape }}</a>
+    <a href="mailto:{{ site.email }}">{{ site.email | escape }}</a>
     {%- if site.footer_show_references -%}
-      &nbsp;- References on request
+      &nbsp;- Referencias a solicitud
     {%- endif -%}
   </p>
-</div>
+</footer>

@@ -1,3 +1,11 @@
+- name: okhttp-json-mock
+  maven: https://central.sonatype.com/artifact/io.github.brodriro/okhttp-json-mock
+  code: https://github.com/brodriro/okhttp-json-mock
+  tech: [Kotlin, Android, OkHttp, Retrofit]
+  description: >-
+    Librería en Kotlin para simular respuestas de OkHttp y Retrofit con archivos JSON locales.
+    Fork mantenido de mirrajabi/okhttp-json-mock, publicado en Maven Central.
+
 - name: http_mutual_authentication
   pub: https://pub.dev/packages/http_mutual_authentication
   code: https://github.com/brodriro/HttpMutualAuthentication

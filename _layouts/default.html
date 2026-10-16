@@ -99,6 +99,7 @@ layout: base
         {%- endif %}
         <p class="pkg__links">
           {%- if project.pub %}<a href="{{ project.pub }}">pub.dev</a>{% endif -%}
+          {%- if project.maven %}<a href="{{ project.maven }}">Maven Central</a>{% endif -%}
           {%- if project.code %}<a href="{{ project.code }}">Código</a>{% endif -%}
         </p>
       </li>
